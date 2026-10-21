@@ -1,0 +1,645 @@
+/* Theme tokens — dark default, light via html[data-theme="light"] */
+:root,
+html[data-theme='dark'] {
+  color-scheme: dark;
+  --page: #090b14;
+  --page-elevated: #0c0f1b;
+  --page-deep: #070910;
+  --page-soft: #0a0c15;
+  --media: #0d1120;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --surface-strong: rgba(255, 255, 255, 0.1);
+  --ink: #f5f0e8;
+  --ink-muted: #e2e8f0;
+  --ink-soft: #cbd5e1;
+  --ink-faint: #cbd5e1;
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --header-bg: rgba(9, 11, 20, 0.92);
+  --footer-bg: #070910;
+  --accent-solid: #f5d76e;
+  --accent-label: #f5d76e;
+  --form-from: #14111a;
+  --form-via: #0e111e;
+  --form-to: #161208;
+  --input-bg: rgba(255, 255, 255, 0.04);
+  --input-solid: #151827;
+  --input-border: rgba(255, 255, 255, 0.12);
+  --placeholder: #94a3b8;
+  --chip-bg: rgba(255, 255, 255, 0.05);
+  --shadow-form: rgba(120, 53, 15, 0.2);
+  --nav: #cbd5e1;
+  --nav-hover: #ffffff;
+  --toggle-bg: rgba(255, 255, 255, 0.06);
+  --toggle-border: rgba(255, 255, 255, 0.15);
+  --note-bg: rgba(253, 230, 138, 0.05);
+  --note-border: rgba(253, 230, 138, 0.2);
+  --ring-offset: #0e111e;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  --page: #f3efe7;
+  --page-elevated: #e9e3d9;
+  --page-deep: #ddd5c8;
+  --page-soft: #efeae2;
+  --media: #ddd5c8;
+  --surface: #ffffff;
+  --surface-hover: #fcfaf5;
+  --surface-strong: #ffffff;
+  --ink: #12141c;
+  --ink-muted: #1e293b;
+  --ink-soft: #334155;
+  --ink-faint: #334155;
+  --line: rgba(18, 20, 28, 0.14);
+  --line-strong: rgba(18, 20, 28, 0.24);
+  --header-bg: rgba(243, 239, 231, 0.96);
+  --footer-bg: #12141c;
+  --accent-solid: #5c3f1f;
+  --accent-label: #5c3f1f;
+  --form-from: #ffffff;
+  --form-via: #faf6ef;
+  --form-to: #f3ebe0;
+  --input-bg: #ffffff;
+  --input-solid: #ffffff;
+  --input-border: rgba(18, 20, 28, 0.2);
+  --placeholder: #475569;
+  --chip-bg: rgba(92, 63, 31, 0.1);
+  --shadow-form: rgba(18, 20, 28, 0.1);
+  --nav: #1e293b;
+  --nav-hover: #12141c;
+  --toggle-bg: #ffffff;
+  --toggle-border: rgba(18, 20, 28, 0.18);
+  --note-bg: rgba(92, 63, 31, 0.1);
+  --note-border: rgba(92, 63, 31, 0.28);
+  --ring-offset: #faf6ef;
+}
+
+html {
+  background-color: var(--page);
+}
+
+.bg-page {
+  background-color: var(--page);
+}
+.bg-page-glass {
+  background-color: color-mix(in srgb, var(--page) 88%, transparent);
+}
+.bg-elevated {
+  background-color: var(--page-elevated);
+}
+.bg-deep {
+  background-color: var(--page-deep);
+}
+.bg-soft {
+  background-color: var(--page-soft);
+}
+.bg-media {
+  background-color: var(--media);
+}
+.bg-surface {
+  background-color: var(--surface);
+}
+.bg-surface-hover:hover {
+  background-color: var(--surface-hover);
+}
+.bg-chip {
+  background-color: var(--chip-bg);
+}
+
+.text-ink {
+  color: var(--ink);
+}
+.text-muted {
+  color: var(--ink-muted);
+}
+.text-soft {
+  color: var(--ink-soft);
+}
+.text-faint {
+  color: var(--ink-faint);
+}
+.text-accent {
+  color: var(--accent-label);
+}
+.placeholder\:text-faint::placeholder {
+  color: var(--placeholder);
+}
+
+.border-line {
+  border-color: var(--line);
+}
+.border-line-strong {
+  border-color: var(--line-strong);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background-color: var(--header-bg);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background-color: var(--footer-bg);
+  color: #f5f0e8;
+}
+
+.site-footer a {
+  color: #cbd5e1;
+}
+.site-footer a:hover {
+  color: #ffffff;
+}
+.site-footer .footer-meta {
+  color: #cbd5e1;
+}
+
+.site-nav a {
+  color: var(--nav);
+}
+.site-nav a:hover {
+  color: var(--nav-hover);
+}
+.site-nav a.is-active {
+  color: var(--accent-label);
+}
+
+.step-2 {
+  color: #5b21b6;
+}
+.step-3 {
+  color: #075985;
+}
+html[data-theme='dark'] .step-2 {
+  color: #c4b5fd;
+}
+html[data-theme='dark'] .step-3 {
+  color: #7dd3fc;
+}
+
+html[data-theme='dark'] .site-card,
+.site-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #101423;
+}
+html[data-theme='dark'] .site-card:hover,
+.site-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background-color: #151a2d;
+}
+html[data-theme='light'] .site-card {
+  border: 1px solid rgba(18, 20, 28, 0.14);
+  background-color: #ffffff;
+}
+html[data-theme='light'] .site-card:hover {
+  border-color: rgba(18, 20, 28, 0.24);
+  background-color: #fcfaf5;
+}
+
+.site-form-panel {
+  border: 1px solid color-mix(in srgb, var(--accent-solid) 22%, transparent);
+  background-image: linear-gradient(135deg, var(--form-from), var(--form-via), var(--form-to));
+  box-shadow: 0 25px 50px -12px var(--shadow-form);
+  color: var(--ink);
+}
+
+.site-input {
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--ink);
+}
+.site-input:focus {
+  border-color: color-mix(in srgb, var(--accent-solid) 55%, transparent);
+  outline: none;
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-solid) 18%, transparent);
+}
+.site-select {
+  border: 1px solid var(--input-border);
+  background-color: var(--input-solid);
+  color: var(--ink);
+}
+.site-select:focus {
+  border-color: color-mix(in srgb, var(--accent-solid) 55%, transparent);
+  outline: none;
+}
+
+.site-note {
+  border: 1px solid var(--note-border);
+  background-color: var(--note-bg);
+  color: var(--ink-muted);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--toggle-border);
+  background-color: var(--toggle-bg);
+  color: var(--ink);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.theme-toggle:hover {
+  border-color: color-mix(in srgb, var(--accent-solid) 45%, transparent);
+  color: var(--accent-label);
+}
+.theme-toggle .icon-sun {
+  display: none;
+}
+.theme-toggle .icon-moon {
+  display: block;
+}
+.info-prose code {
+  border-radius: 0.375rem;
+  border: 1px solid var(--line);
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  color: var(--ink);
+}
+.info-prose li::marker {
+  color: #e5b84b;
+}
+
+.mobile-menu-toggle .icon-close,
+.mobile-menu-toggle[aria-expanded='true'] .icon-menu {
+  display: none;
+}
+.mobile-menu-toggle[aria-expanded='true'] .icon-close {
+  display: block;
+}
+/* Must match Tailwind's md breakpoint, where the desktop nav appears */
+@media (min-width: 768px) {
+  .mobile-menu-toggle,
+  #mobile-nav-drawer {
+    display: none !important;
+  }
+}
+
+.brand-logo-light {
+  display: none;
+}
+html[data-theme='light'] .brand-logo-light {
+  display: block;
+}
+html[data-theme='light'] .brand-logo-dark {
+  display: none;
+}
+
+html[data-theme='light'] .theme-toggle .icon-sun {
+  display: block;
+}
+html[data-theme='light'] .theme-toggle .icon-moon {
+  display: none;
+}
+
+.yellow-text {
+  background-image: linear-gradient(135deg, #fff6c8 0%, #f5d76e 45%, #e8a93a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.yellow-btn {
+  background-color: #f5d76e;
+  background-image: linear-gradient(135deg, #fff1b0 0%, #f5d76e 48%, #e8a93a 100%);
+  color: #12141c !important;
+}
+.yellow-btn:hover {
+  background-color: #fbe08a;
+  background-image: linear-gradient(135deg, #fff8d0 0%, #fbe08a 48%, #f0b84a 100%);
+  color: #12141c !important;
+}
+.yellow-line {
+  background-image: linear-gradient(90deg, #f5d76e, transparent);
+}
+
+html[data-theme='light'] .yellow-text {
+  background-image: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: #5c3f1f;
+}
+
+html[data-theme='light'] .yellow-btn {
+  background-color: #e5b84b;
+  background-image: linear-gradient(135deg, #f5d76e 0%, #e5b84b 55%, #d49a2a 100%);
+  color: #12141c !important;
+}
+html[data-theme='light'] .yellow-btn:hover {
+  background-color: #ecc35c;
+  background-image: linear-gradient(135deg, #fbe08a 0%, #ecc35c 55%, #dea638 100%);
+  color: #12141c !important;
+}
+
+html[data-theme='light'] .yellow-line {
+  background-image: linear-gradient(90deg, #5c3f1f, transparent);
+}
+
+/* ==========================================================================
+   WCAG AA+ Contrast Enforcement for Light & Dark Themes Across Entire Site
+   ========================================================================== */
+
+/* Light-mode text colors (>7:1 for primary/accent, >4.8:1 for secondary) */
+html[data-theme='light'] .text-white,
+html[data-theme='light'] .text-slate-100,
+html[data-theme='light'] .text-slate-200,
+html[data-theme='light'] input.text-white,
+html[data-theme='light'] input.text-slate-100,
+html[data-theme='light'] select.text-slate-100 {
+  color: #12141c !important;
+}
+
+html[data-theme='light'] .text-slate-300 {
+  color: #1e293b !important;
+}
+
+html[data-theme='light'] .text-slate-400,
+html[data-theme='light'] .text-slate-500,
+html[data-theme='light'] .placeholder\:text-slate-300::placeholder,
+html[data-theme='light'] .placeholder\:text-slate-400::placeholder,
+html[data-theme='light'] .placeholder\:text-slate-500::placeholder {
+  color: #334155 !important;
+}
+
+/* All amber/gold accents in light mode map to deep warm bronze (#5c3f1f, ~8.2:1 contrast on white/cream) */
+html[data-theme='light'] .text-amber-100,
+html[data-theme='light'] .text-amber-200,
+html[data-theme='light'] .text-amber-200\/80,
+html[data-theme='light'] .text-amber-200\/90,
+html[data-theme='light'] .text-amber-300,
+html[data-theme='light'] .text-amber-400,
+html[data-theme='light'] .hover\:text-amber-300:hover,
+html[data-theme='light'] .group:hover .group-hover\:text-amber-300 {
+  color: #5c3f1f !important;
+}
+
+html[data-theme='light'] .decoration-amber-300\/40,
+html[data-theme='light'] .hover\:decoration-amber-300:hover {
+  text-decoration-color: #5c3f1f !important;
+}
+
+/* Sky / Cyan / Purple / Emerald / Rose accents in light mode (>5.5:1 contrast on white/cream) */
+html[data-theme='light'] .text-sky-200,
+html[data-theme='light'] .text-sky-300,
+html[data-theme='light'] .text-sky-400,
+html[data-theme='light'] .text-sky-500 {
+  color: #075985 !important;
+}
+
+html[data-theme='light'] .text-purple-300,
+html[data-theme='light'] .text-violet-200,
+html[data-theme='light'] .text-violet-300,
+html[data-theme='light'] .text-violet-500 {
+  color: #5b21b6 !important;
+}
+
+html[data-theme='light'] .text-emerald-200,
+html[data-theme='light'] .text-emerald-300,
+html[data-theme='light'] .text-emerald-400 {
+  color: #065f46 !important;
+}
+
+html[data-theme='light'] .text-rose-200,
+html[data-theme='light'] .text-rose-300,
+html[data-theme='light'] .text-red-400 {
+  color: #9f1239 !important;
+}
+
+html[data-theme='light'] .text-orange-200 {
+  color: #9a3412 !important;
+}
+html[data-theme='light'] .text-cyan-200 {
+  color: #155e75 !important;
+}
+
+/* Light-mode badge & chip backgrounds so text inside badges is always high-contrast */
+html[data-theme='light'] .bg-amber-300\/5,
+html[data-theme='light'] .bg-amber-300\/10,
+html[data-theme='light'] .bg-amber-400\/10 {
+  background-color: rgba(92, 63, 31, 0.12) !important;
+}
+html[data-theme='light'] .border-amber-300\/20,
+html[data-theme='light'] .border-amber-200\/20,
+html[data-theme='light'] .hover\:border-amber-300\/30:hover,
+html[data-theme='light'] .hover\:border-amber-300\/35:hover {
+  border-color: rgba(92, 63, 31, 0.35) !important;
+}
+
+/* Active category pill in light mode: dark ink background with cream text, or rich gold with dark ink */
+html[data-theme='light'] .cat-pill.bg-amber-300 {
+  background-color: #5c3f1f !important;
+  color: #ffffff !important;
+}
+
+/* Image overlay badges (e.g. bg-slate-950/85 on tool cards) stay dark with bright gold text in both modes */
+html[data-theme='light'] .bg-slate-950\/85,
+html[data-theme='light'] .bg-slate-950\/95 {
+  background-color: rgba(9, 11, 20, 0.92) !important;
+  color: #f8fafc !important;
+}
+html[data-theme='light'] .bg-slate-950\/85.text-amber-300,
+html[data-theme='light'] .bg-slate-950\/95 .text-amber-300 {
+  color: #fde68a !important;
+}
+html[data-theme='light'] .bg-slate-950\/95 .text-slate-200 {
+  color: #f1f5f9 !important;
+}
+html[data-theme='light'] .bg-slate-950\/95 .text-slate-400 {
+  color: #cbd5e1 !important;
+}
+
+/* Light-mode surfaces, inputs, borders, and dividers */
+html[data-theme='light'] .border-white\/5,
+html[data-theme='light'] .border-white\/10,
+html[data-theme='light'] .border-white\/15,
+html[data-theme='light'] .border-white\/20 {
+  border-color: rgba(18, 20, 28, 0.14) !important;
+}
+
+html[data-theme='light'] .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(18, 20, 28, 0.1) !important;
+}
+
+html[data-theme='light'] .bg-white\/\[0\.015\],
+html[data-theme='light'] .bg-white\/\[0\.02\],
+html[data-theme='light'] .bg-white\/\[0\.025\],
+html[data-theme='light'] .bg-white\/\[0\.03\],
+html[data-theme='light'] .bg-white\/\[0\.04\],
+html[data-theme='light'] .bg-white\/5 {
+  background-color: #f8f5ee !important;
+}
+
+html[data-theme='light'] .hover\:bg-white\/\[0\.02\]:hover,
+html[data-theme='light'] .hover\:bg-white\/\[0\.04\]:hover,
+html[data-theme='light'] .hover\:bg-white\/\[0\.045\]:hover,
+html[data-theme='light'] .hover\:bg-white\/\[0\.05\]:hover,
+html[data-theme='light'] .hover\:bg-white\/\[0\.07\]:hover,
+html[data-theme='light'] .hover\:bg-white\/10:hover {
+  background-color: #efe9dd !important;
+}
+
+html[data-theme='light'] select option.bg-slate-900 {
+  background-color: #ffffff !important;
+  color: #12141c !important;
+}
+
+html[data-theme='light'] input[type='range'].bg-slate-800 {
+  background-color: #cbd5e1 !important;
+}
+
+/* Dark celestial visual stages (Radix wheel & Astrocartography map) stay dark in both themes for star/planet legibility */
+.dark-observatory-stage {
+  background: radial-gradient(circle at 50% 45%, #111827 0%, #070b16 70%, #050811 100%);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Footer stays dark with high-contrast light text in both themes */
+html[data-theme='light'] footer.bg-\[\#090b14\],
+html[data-theme='light'] .site-footer,
+html[data-theme='light'] footer[class*='bg-[#090b14]'] {
+  background-color: #12141c !important;
+  color: #f5f0e8 !important;
+}
+html[data-theme='light'] footer .text-slate-100,
+html[data-theme='light'] footer .text-slate-200,
+html[data-theme='light'] footer .text-slate-300,
+html[data-theme='light'] footer .text-white,
+html[data-theme='light'] .site-footer a,
+html[data-theme='light'] .site-footer .text-soft {
+  color: #e2e8f0 !important;
+}
+html[data-theme='light'] footer .text-slate-400,
+html[data-theme='light'] .site-footer .footer-meta {
+  color: #cbd5e1 !important;
+}
+html[data-theme='light'] footer .text-white:hover,
+html[data-theme='light'] footer a:hover {
+  color: #ffffff !important;
+}
+html[data-theme='light'] footer .yellow-text {
+  background-image: linear-gradient(135deg, #fff6c8 0%, #f5d76e 45%, #e8a93a 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Keep intentional dark illustration pockets on /blog and /privacy dark in both modes */
+html[data-theme='light'] .bg-\[\#171923\].text-white,
+html[data-theme='light'] .bg-\[\#765329\].text-white {
+  color: #ffffff !important;
+}
+html[data-theme='light'] .from-\[\#1a1720\] {
+  background-color: #111522 !important;
+  color: #f5f0e8 !important;
+}
+html[data-theme='light'] .bg-\[\#111522\] .text-slate-300,
+html[data-theme='light'] .from-\[\#1a1720\] .text-slate-300 {
+  color: #e2e8f0 !important;
+}
+html[data-theme='light'] .bg-\[\#111522\] .text-amber-200,
+html[data-theme='light'] .from-\[\#1a1720\] .text-amber-200 {
+  color: #fde68a !important;
+}
+html[data-theme='light'] .bg-\[\#111522\] .text-violet-200 {
+  color: #ddd6fe !important;
+}
+html[data-theme='light'] .bg-\[\#111522\] .text-sky-200 {
+  color: #bae6fd !important;
+}
+
+/* Dark-mode readability for pages that started as light (blog / privacy) & general muted text */
+html[data-theme='dark'] .text-slate-950:not(.yellow-btn):not(.cat-pill),
+html[data-theme='dark'] .text-slate-900:not(.yellow-btn):not(.cat-pill) {
+  color: #f5f0e8;
+}
+html[data-theme='dark'] .text-slate-800,
+html[data-theme='dark'] .text-slate-700 {
+  color: #e2e8f0;
+}
+html[data-theme='dark'] .text-slate-600 {
+  color: #cbd5e1;
+}
+html[data-theme='dark'] .text-\[\#765329\],
+html[data-theme='dark'] .text-\[\#a47a45\] {
+  color: #f5d76e;
+}
+html[data-theme='dark'] .border-slate-900\/10,
+html[data-theme='dark'] .border-slate-900\/20,
+html[data-theme='dark'] .border-\[\#765329\]\/20 {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+html[data-theme='dark'] .bg-\[\#e9e0d2\],
+html[data-theme='dark'] .bg-\[\#ede5d9\],
+html[data-theme='dark'] .bg-\[\#f3efe7\],
+html[data-theme='dark'] .bg-\[\#e9e3d9\],
+html[data-theme='dark'] .bg-white\/40 {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+html[data-theme='dark'] .hover\:text-slate-950:hover {
+  color: #f5d76e;
+}
+html[data-theme='dark'] .bg-\[\#171923\] {
+  background-color: #f5d76e;
+  color: #171923;
+}
+html[data-theme='dark'] .bg-\[\#171923\]:hover,
+html[data-theme='dark'] .hover\:bg-\[\#765329\]:hover {
+  background-color: #fbe08a;
+  color: #171923;
+}
+
+/* Dark-mode: ensure slate-400 & slate-500 pass 4.5:1 on dark cards */
+html[data-theme='dark'] .text-slate-400,
+html[data-theme='dark'] .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+/* ==========================================================================
+   Vanguard Observatory UI System (Single-Font Precision & Core Web Vitals)
+   ========================================================================== */
+
+:root {
+  --font-site: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html,
+body,
+.font-sans,
+.font-serif,
+.font-display,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-site) !important;
+}
+
+.font-serif {
+  font-style: normal;
+  letter-spacing: -0.025em;
+}
+
+/* Below-the-fold section class (kept visible so theme switches & Lighthouse contrast audits evaluate all offscreen cards accurately) */
+.cv-section {
+  content-visibility: visible;
+}
+
+/* Full-Width Precision Navbar */
+.full-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  border-bottom: 1px solid var(--line);
+  background-color: var(--header-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
