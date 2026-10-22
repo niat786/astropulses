@@ -82,7 +82,7 @@
     var ascEl = document.getElementById('wheel-center-asc')
     var mcEl = document.getElementById('wheel-center-mc')
     if (ascEl) ascEl.textContent = data.ascendantFormatted
-    if (mcEl) mcEl.textContent = 'MC ' + data.midheavenFormatted
+    if (mcEl) mcEl.textContent = 'Midheaven ' + data.midheavenFormatted
 
     var aspectsGroup = document.getElementById('wheel-aspects')
     if (aspectsGroup && data.wheel.aspects) {
@@ -131,6 +131,10 @@
             '" data-retro="' +
             retroText +
             '">' +
+            '<title>' +
+            p.name + ' in ' + p.sign + ' ' + p.degreeFormatted + ', house ' + p.house +
+            (p.retrograde ? ' (retrograde)' : '') +
+            '</title>' +
             '<circle cx="' +
             p.x +
             '" cy="' +
@@ -144,8 +148,8 @@
             p.y +
             '" text-anchor="middle" dominant-baseline="central" fill="' +
             color +
-            '" font-size="12" font-weight="700">' +
-            p.glyph +
+            '" font-size="13" font-weight="700">' +
+            p.glyph + '\uFE0E' +
             '</text>' +
             '</g>'
           )

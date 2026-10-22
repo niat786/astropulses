@@ -42,6 +42,33 @@ const PLANET_WHEEL_COLORS: Record<string, string> = {
   Chiron: '#34d399',
 }
 
+// U+FE0E keeps glyphs like ♀ and ♂ from rendering as colour emoji.
+const TEXT_GLYPH = '\uFE0E'
+
+const ASPECT_KEY = [
+  { type: 'Conjunction', meaning: 'blending', color: '#f5d76e' },
+  { type: 'Trine', meaning: 'easy flow', color: '#34d399' },
+  { type: 'Sextile', meaning: 'opportunity', color: '#38bdf8', dash: '3 3' },
+  { type: 'Square', meaning: 'tension', color: '#fb7185' },
+  { type: 'Opposition', meaning: 'balancing act', color: '#f97316', dash: '5 3' },
+]
+
+/** Rotates a ring label so it follows the circle and never reads upside down. */
+function ringLabelRotation(x: number, y: number, center: number): number {
+  const deg = (Math.atan2(y - center, x - center) * 180) / Math.PI
+  return deg > 0 && deg < 180 ? deg - 90 : deg + 90
+}
+
+function formatSkyTime(iso: string): string {
+  const date = new Date(iso).toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  })
+  return `${date} · ${iso.slice(11, 16)} UTC`
+}
+
 export const SkyTelemetryStrip: FC<{ sky: LiveSkySnapshot; compact?: boolean }> = ({ sky, compact }) => {
   return (
     <div class="site-card px-4 py-3 flex flex-wrap items-center justify-between gap-3 text-xs">
@@ -84,7 +111,7 @@ export const RadixWheelSvg: FC<{ sky: LiveSkySnapshot; interactiveId?: boolean }
       viewBox={`0 0 ${sky.wheel.size} ${sky.wheel.size}`}
       class="w-full max-w-[440px] max-h-[440px] select-none mx-auto"
       role="img"
-      aria-label="Real-time Ecliptic Radix Wheel"
+      aria-label={`Live sky wheel. Rising sign ${sky.ascendantFormatted}, Midheaven ${sky.midheavenFormatted}`}
     >
       <defs>
         <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
@@ -117,10 +144,12 @@ export const RadixWheelSvg: FC<{ sky: LiveSkySnapshot; interactiveId?: boolean }
               text-anchor="middle"
               dominant-baseline="central"
               fill="#ffd166"
-              font-size="14"
+              font-size="12.5"
               font-weight="600"
+              letter-spacing="0.4"
+              transform={`rotate(${ringLabelRotation(s.midX, s.midY, sky.wheel.center).toFixed(1)} ${s.midX} ${s.midY})`}
             >
-              {s.glyph}
+              {s.sign}
             </text>
           </g>
         ))}
@@ -142,9 +171,9 @@ export const RadixWheelSvg: FC<{ sky: LiveSkySnapshot; interactiveId?: boolean }
               y={h.labelY}
               text-anchor="middle"
               dominant-baseline="central"
-              fill="rgba(148,163,184,0.6)"
-              font-size="9"
-              font-family="monospace"
+              fill="rgba(203,213,225,0.75)"
+              font-size="11"
+              font-weight="600"
             >
               {h.house}
             </text>
@@ -182,6 +211,9 @@ export const RadixWheelSvg: FC<{ sky: LiveSkySnapshot; interactiveId?: boolean }
               data-dignity={p.dignity}
               data-retro={p.retrograde ? 'Retrograde ℞' : 'Direct'}
             >
+              <title>
+                {`${p.name} in ${p.sign} ${p.degreeFormatted}, house ${p.house}${p.retrograde ? ' (retrograde)' : ''}`}
+              </title>
               <circle
                 cx={p.x}
                 cy={p.y}
@@ -196,10 +228,10 @@ export const RadixWheelSvg: FC<{ sky: LiveSkySnapshot; interactiveId?: boolean }
                 text-anchor="middle"
                 dominant-baseline="central"
                 fill={color}
-                font-size="12"
+                font-size="13"
                 font-weight="700"
               >
-                {p.glyph}
+                {p.glyph + TEXT_GLYPH}
               </text>
             </g>
           )
@@ -207,15 +239,15 @@ export const RadixWheelSvg: FC<{ sky: LiveSkySnapshot; interactiveId?: boolean }
       </g>
 
       <g text-anchor="middle">
-        <text x="260" y="244" fill="#94a3b8" font-size="9" font-family="monospace" letter-spacing="1.5">
-          ASCENDANT
+        <text x="260" y="238" fill="#94a3b8" font-size="10" font-weight="600" letter-spacing="1.5">
+          RISING SIGN
         </text>
         <text
           id={interactiveId ? 'wheel-center-asc' : undefined}
           x="260"
-          y="263"
+          y="258"
           fill="#f8fafc"
-          font-size="13"
+          font-size="15"
           font-weight="700"
         >
           {sky.ascendantFormatted}
@@ -223,12 +255,12 @@ export const RadixWheelSvg: FC<{ sky: LiveSkySnapshot; interactiveId?: boolean }
         <text
           id={interactiveId ? 'wheel-center-mc' : undefined}
           x="260"
-          y="281"
+          y="282"
           fill="#ffd166"
-          font-size="10"
-          font-family="monospace"
+          font-size="11"
+          font-weight="600"
         >
-          MC {sky.midheavenFormatted}
+          Midheaven {sky.midheavenFormatted}
         </text>
       </g>
     </svg>
@@ -394,11 +426,12 @@ export const ToolObservatorySection: FC<{ tool: Tool; sky: LiveSkySnapshot }> = 
               <div class="flex items-center justify-between gap-2 mb-3">
                 <div>
                   <span class="text-[11px] font-semibold uppercase tracking-wider text-amber-300">
-                    Live Reference Wheel
+                    Live Sky Wheel
                   </span>
-                  <h3 class="text-lg font-bold tracking-tight mt-0.5">
-                    Current Sky Radix ({sky.timestampReadable})
-                  </h3>
+                  <h3 class="text-lg font-bold tracking-tight mt-0.5">Where the planets are right now</h3>
+                  <p class="text-sm text-slate-400 mt-0.5">
+                    <time datetime={sky.timestampIso}>{formatSkyTime(sky.timestampIso)}</time>
+                  </p>
                 </div>
                 <a
                   href="/tools/interactive-birth-chart"
@@ -410,14 +443,54 @@ export const ToolObservatorySection: FC<{ tool: Tool; sky: LiveSkySnapshot }> = 
               <div class="py-2 px-2 rounded-2xl dark-observatory-stage my-2">
                 <RadixWheelSvg sky={sky} interactiveId={false} />
               </div>
-              <div class="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400 pt-3 border-t border-white/10">
-                <span>
-                  ASC: <strong class="text-slate-200">{sky.ascendantFormatted}</strong> · MC:{' '}
-                  <strong class="text-amber-300">{sky.midheavenFormatted}</strong>
-                </span>
-                <a href="/tools/astrocartography-map" class="text-sky-300 hover:underline font-medium">
-                  View Astrocartography Map →
-                </a>
+              <div class="space-y-4 pt-4 border-t border-white/10 text-sm">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Planet key</p>
+                  <ul class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-1.5">
+                    {sky.planets.map((p) => (
+                      <li key={p.name} class="flex items-center gap-2 text-slate-200">
+                        <span
+                          class="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-[13px] font-bold"
+                          style={`color:${PLANET_WHEEL_COLORS[p.name] || '#ffd166'};border-color:${PLANET_WHEEL_COLORS[p.name] || '#ffd166'};background:#070b16`}
+                          aria-hidden="true"
+                        >
+                          {p.glyph + TEXT_GLYPH}
+                        </span>
+                        <span>
+                          {p.name} <span class="text-slate-400">in {p.sign}</span>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">What the lines mean</p>
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-1.5">
+                    {ASPECT_KEY.map((a) => (
+                      <li key={a.type} class="flex items-center gap-2 text-slate-200">
+                        <svg
+                          width="34"
+                          height="16"
+                          viewBox="0 0 34 16"
+                          aria-hidden="true"
+                          class="shrink-0 rounded"
+                          style="background:#070b16"
+                        >
+                          <line x1="5" y1="8" x2="29" y2="8" stroke={a.color} stroke-width="2" stroke-dasharray={a.dash} />
+                        </svg>
+                        <span>
+                          {a.type} <span class="text-slate-400">· {a.meaning}</span>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div class="flex flex-wrap items-center justify-between gap-2 text-slate-400">
+                  <span>Numbers inside the ring are the 12 houses.</span>
+                  <a href="/tools/astrocartography-map" class="text-sky-300 hover:underline font-medium">
+                    View Astrocartography Map →
+                  </a>
+                </div>
               </div>
             </div>
             <div class="lg:col-span-6">
