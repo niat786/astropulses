@@ -121,7 +121,7 @@ export const tools: Tool[] = [
     "id": 3,
     "slug": "rising-sign-finder",
     "name": "Rising Sign Finder",
-    "description": "Find your Rising sign—the face you show the world.",
+    "description": "Find your Rising sign, the face you show the world.",
     "categoryId": "beginner-sign-finders",
     "featured": true,
     "fields": [
@@ -509,7 +509,7 @@ export const tools: Tool[] = [
     "id": 33,
     "slug": "empty-house-explainer",
     "name": "Empty House Explainer",
-    "description": "Learn what an empty house means—and why it still matters.",
+    "description": "Learn what an empty house means and why it still matters.",
     "categoryId": "accessible-natal-analysis-tools",
     "featured": false,
     "fields": [
@@ -2190,7 +2190,7 @@ export const tools: Tool[] = [
     "id": 161,
     "slug": "part-of-spirit-pars-spiritus-calculator",
     "name": "Part of Spirit / Pars Spiritus Calculator",
-    "description": "Find the Part of Spirit—focus, will, and directed effort.",
+    "description": "Find the Part of Spirit: focus, will, and directed effort.",
     "categoryId": "essential-birth-chart-tools",
     "featured": false,
     "fields": [

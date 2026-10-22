@@ -1,6 +1,6 @@
-import type { BlogPost } from './blog'
+import type { BlogPostInput } from './blog'
 
-export const moreBlogPosts: BlogPost[] = [
+export const moreBlogPosts: BlogPostInput[] = [
   {
     slug: 'how-to-read-your-birth-chart',
     serpTitle: 'How to Read Your Birth Chart: Easy Beginner Guide',
@@ -10,8 +10,7 @@ export const moreBlogPosts: BlogPost[] = [
     category: 'Chart Basics',
     categorySlug: 'chart-basics',
     publishedAt: '2026-10-07',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 9,
+    modifiedAt: '2026-10-22',
     featured: true,
     heroToolSlug: 'birth-chart-generator',
     primaryToolSlug: 'birth-chart-generator',
@@ -30,11 +29,9 @@ export const moreBlogPosts: BlogPost[] = [
           'Every birth chart is built from planets, signs, and houses. That’s it. Everything else is detail.',
           'Think of it like a sentence. The planet is the actor. The sign is the costume the actor wears. The house is the stage where the scene plays out.',
           'So “Venus in Leo in the 10th house” reads as: your love style (Venus) is warm and bold (Leo), and it shows up most at work (10th house).',
-          'Actor. Costume. Stage.',
         ],
-        verdict: 'Actor. Costume. Stage.',
         comparisonTable: {
-          intro: 'Here is a quick cheat sheet. Keep it open while you look at your own chart.',
+          intro: 'Keep this cheat sheet open while you look at your own chart.',
           headers: ['Part', 'Simple Meaning', 'What It Can Tell You', 'What It Cannot Tell You'],
           rows: [
             {
@@ -67,9 +64,9 @@ export const moreBlogPosts: BlogPost[] = [
           'By step five, you’ll know more about your chart than most people ever learn.',
         ],
         bullets: [
-          { title: 'Step 1: Find your Big Three', body: 'Look up your Sun, Moon, and Rising sign. These are the headline of your chart.' },
+          { title: 'Step 1: Find your Big Three', body: 'Look up your Sun, Moon, and Rising sign. These are the headline of your chart. Our [Big Three guide](/blog/your-big-three-where-to-begin) explains each one.' },
           { title: 'Step 2: Find your chart ruler', body: 'The planet that rules your Rising sign steers the whole chart. Libra Rising? Venus is your ruler.' },
-          { title: 'Step 3: Check the angles', body: 'Planets near the 1st, 4th, 7th, or 10th house lines act loudest in your life.' },
+          { title: 'Step 3: Check the angles', body: 'Planets near the 1st, 4th, 7th, or 10th house lines act loudest in your life. See the [12 houses guide](/blog/12-houses-in-astrology-explained) for what each house covers.' },
           { title: 'Step 4: Count the elements', body: 'Lots of Fire means drive. Lots of Earth means patience. Lots of Air means ideas. Lots of Water means feeling.' },
           { title: 'Step 5: Read the tight aspects', body: 'Two planets within 3° of a key angle are tightly linked. Start with those.' },
         ],
@@ -82,9 +79,7 @@ export const moreBlogPosts: BlogPost[] = [
           'Aspects are the angles between two planets. They show how two parts of you get along.',
           'A trine (120°) feels easy, like two friends who never argue. A square (90°) feels tense, like roommates who share one bathroom. However, tension isn’t bad. Squares are where most people build real skill.',
           'A conjunction (0°) blends two planets into one voice. An opposition (180°) puts them on a seesaw you learn to balance.',
-          'Easy angles comfort. Hard angles build.',
         ],
-        verdict: 'Easy angles comfort. Hard angles build.',
         toolSlug: 'aspect-calculator',
       },
       {
@@ -93,10 +88,8 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'First, they read each planet alone, like separate fortune cookies. A chart works as one system, so look for themes that repeat.',
           'Second, they panic over “bad” placements. There are no bad charts. Saturn in your 7th house doesn’t doom your love life. It often means you take commitment seriously.',
-          'Third, they trust a guessed birth time. A 30-minute error can change your Rising sign and every house. So check your birth certificate first.',
-          'Look for patterns, not verdicts.',
+          'Third, they trust a guessed birth time. A 30-minute error can change your Rising sign and every house. So check your birth certificate first. Our guide on [why birth time matters](/blog/why-your-exact-birth-time-matters) explains how much can shift.',
         ],
-        verdict: 'Look for patterns, not verdicts.',
         callout: {
           eyebrow: 'Try This',
           text: 'Write down any word that shows up three times in your reading. That repeated theme is usually the truest part of your chart.',
@@ -127,13 +120,12 @@ export const moreBlogPosts: BlogPost[] = [
     slug: '12-houses-in-astrology-explained',
     serpTitle: '12 Houses in Astrology Explained Simply [2026]',
     title: 'The 12 Houses in Astrology Explained: What Each House Rules in Your Life',
-    subtitle: 'Signs tell you how. Houses tell you where. Here is a plain-English tour of all twelve houses, with real-life examples for each one.',
+    subtitle: 'Signs tell you how. Houses tell you where. Take a plain-English tour of all twelve houses, with real-life examples for each one.',
     description: 'What do the 12 houses in astrology mean? Get a simple guide to each house, from self and money to love and career, plus a free house calculator.',
     category: 'Chart Basics',
     categorySlug: 'chart-basics',
     publishedAt: '2026-10-09',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 10,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'planet-in-house-calculator',
     primaryToolSlug: 'planet-in-house-calculator',
     relatedToolSlugs: ['planet-in-house-calculator', 'house-cusp-calculator', 'empty-house-explainer', 'house-system-comparison-tool'],
@@ -149,11 +141,9 @@ export const moreBlogPosts: BlogPost[] = [
         heading: 'What are houses in astrology?',
         paragraphs: [
           'Picture your chart as a clock face. Earth spins once a day, so the whole sky passes through 12 slices every 24 hours. Each slice is a house.',
-          'Your Rising sign marks the start of the 1st house. After that, the houses run counterclockwise, 1 through 12.',
-          'Because the sky turns so fast, your houses depend on your exact birth time. In fact, the whole wheel shifts about 1° every 4 minutes.',
-          'Signs color. Houses locate.',
+          'Your [Rising sign](/blog/your-big-three-where-to-begin) marks the start of the 1st house. After that, the houses run counterclockwise, 1 through 12.',
+          'Because the sky turns so fast, your houses depend on your [exact birth time](/blog/why-your-exact-birth-time-matters). The whole wheel shifts about 1° every 4 minutes.',
         ],
-        verdict: 'Signs color. Houses locate.',
         toolSlug: 'house-cusp-calculator',
       },
       {
@@ -194,9 +184,7 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'Not all houses act with the same volume. Astrologers group them into three tiers.',
           'Planets in angular houses push hard and get noticed. Planets in cadent houses work quietly, often through thinking and adjusting.',
-          'Loud, steady, or subtle.',
         ],
-        verdict: 'Loud, steady, or subtle.',
         comparisonTable: {
           intro: 'Use this table to see how strongly a planet shows up based on its house type.',
           headers: ['House Type', 'Houses', 'How Planets Act Here', 'What It Does Not Mean'],
@@ -227,11 +215,11 @@ export const moreBlogPosts: BlogPost[] = [
     faqs: [
       {
         question: 'What does an empty house mean in astrology?',
-        answer: 'An empty house simply has no planets in it. With 10 planets and 12 houses, every chart has empty houses. Read the sign on that house and its ruling planet instead.',
+        answer: 'An empty house simply has no planets in it. With 10 planets and 12 houses, every chart has empty houses. Read the sign on that house and its ruling planet instead. The [empty house explainer](/tools/empty-house-explainer) does this for you.',
       },
       {
         question: 'Which house system should a beginner use?',
-        answer: 'Whole Sign houses are the easiest. Each sign equals one full house. Placidus is the most common modern system, but it can stretch houses at high latitudes.',
+        answer: 'Whole Sign houses are the easiest. Each sign equals one full house. Placidus is the most common modern system, but it can stretch houses at high latitudes. You can compare both with the [house system comparison tool](/tools/house-system-comparison-tool).',
       },
       {
         question: 'Which house rules love and marriage?',
@@ -247,13 +235,12 @@ export const moreBlogPosts: BlogPost[] = [
     slug: 'mercury-retrograde-meaning-survival-guide',
     serpTitle: 'Mercury Retrograde Meaning: What to Do & Avoid',
     title: 'What Is Mercury Retrograde? Meaning, Myths, and a Simple Survival Guide',
-    subtitle: 'Your phone dies, an email goes to the wrong person, and an ex texts “hey.” Is it really Mercury? Here is what actually happens in the sky, and what to do about it.',
+    subtitle: 'Your phone dies, an email goes to the wrong person, and an ex texts “hey.” Is it really Mercury? Learn what happens in the sky, and what to do about it.',
     description: 'What is Mercury retrograde? Learn what it means, why it happens 3 to 4 times a year, what to avoid, and how to check the next dates on a free calendar.',
     category: 'Planetary Cycles & Timing',
     categorySlug: 'planetary-cycles',
     publishedAt: '2026-10-10',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 8,
+    modifiedAt: '2026-10-22',
     featured: true,
     heroToolSlug: 'retrograde-calendar',
     primaryToolSlug: 'retrograde-calendar',
@@ -272,9 +259,7 @@ export const moreBlogPosts: BlogPost[] = [
           'Think of two cars on a highway. When you pass a slower car, it seems to slide backward for a moment. It isn’t. You’re just moving faster.',
           'Mercury works the same way, only flipped. Mercury orbits the Sun much faster than Earth, in just 88 days. Each time it laps us, it looks like it slows, stops, and drifts back.',
           'This happens 3 to 4 times a year. Altogether, Mercury looks retrograde about 19% of the time.',
-          'An illusion with real timing.',
         ],
-        verdict: 'An illusion with real timing.',
         toolSlug: 'retrograde-calendar',
       },
       {
@@ -283,11 +268,9 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'Mercury rules talk, travel, tech, and paperwork. So when it turns retrograde, these areas tend to need extra care.',
           'However, you don’t need to freeze your whole life. You just need to slow down and double-check.',
-          'Re-read. Re-check. Re-send.',
         ],
-        verdict: 'Re-read. Re-check. Re-send.',
         comparisonTable: {
-          intro: 'Here is a balanced list. It shows what tends to go well and what tends to go sideways during a retrograde.',
+          intro: 'Some things tend to go well during a retrograde. Others tend to go sideways.',
           headers: ['Area', 'Good Moves', 'Risky Moves', 'Simple Tip'],
           rows: [
             {
@@ -325,9 +308,7 @@ export const moreBlogPosts: BlogPost[] = [
           'The shadow is the stretch of sky Mercury covers three times: once forward, once backward, and once forward again.',
           'The pre-shadow starts about two weeks before the retrograde. The post-shadow lasts about two weeks after. During these windows, you often notice the issue first, then fix it later.',
           'So the full cycle runs closer to two months. That’s why some problems seem to start early and clear up late.',
-          'Notice, review, then resolve.',
         ],
-        verdict: 'Notice, review, then resolve.',
         toolSlug: 'retrograde-planet-finder',
       },
       {
@@ -335,11 +316,9 @@ export const moreBlogPosts: BlogPost[] = [
         heading: 'Does Mercury retrograde affect everyone the same way?',
         paragraphs: [
           'No. Each retrograde happens in a specific sign, and that sign lands in a different house for every person.',
-          'For example, a retrograde in Scorpio might stir up money talks for one person and old friendships for another. It depends on which house Scorpio rules in your chart.',
-          'Also, about 1 in 5 people are born with Mercury retrograde. They often think in loops, revise a lot, and feel calmer during retrograde periods than everyone else.',
-          'Same sky. Your house.',
+          'For example, a retrograde in Scorpio might stir up money talks for one person and old friendships for another. It depends on which house Scorpio rules in your chart. Our [12 houses guide](/blog/12-houses-in-astrology-explained) explains each one.',
+          'About 1 in 5 people are born with Mercury retrograde. You can check your own chart with the [retrograde planet finder](/tools/retrograde-planet-finder). They often think in loops, revise a lot, and feel calmer during retrograde periods than everyone else.',
         ],
-        verdict: 'Same sky. Your house.',
         toolSlug: 'mercury-sign-finder',
       },
     ],
@@ -350,7 +329,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'How often does Mercury go retrograde?',
-        answer: 'Mercury goes retrograde 3 to 4 times each year. Check a retrograde calendar for the exact start and end dates in your time zone.',
+        answer: 'Mercury goes retrograde 3 to 4 times each year. Check the [retrograde calendar](/tools/retrograde-calendar) for the exact start and end dates in your time zone.',
       },
       {
         question: 'Is Mercury retrograde bad?',
@@ -371,8 +350,7 @@ export const moreBlogPosts: BlogPost[] = [
     category: 'Synastry & Relationships',
     categorySlug: 'relationships',
     publishedAt: '2026-10-11',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 9,
+    modifiedAt: '2026-10-22',
     featured: true,
     heroToolSlug: 'zodiac-compatibility-calculator',
     primaryToolSlug: 'zodiac-compatibility-calculator',
@@ -391,11 +369,9 @@ export const moreBlogPosts: BlogPost[] = [
           'The quickest test is the element rule. Each sign belongs to one of four elements.',
           'Fire (Aries, Leo, Sagittarius) and Air (Gemini, Libra, Aquarius) feed each other, like wind on a campfire. Earth (Taurus, Virgo, Capricorn) and Water (Cancer, Scorpio, Pisces) support each other, like rain on soil.',
           'Signs in the same element also get along easily. They simply “get” each other’s pace.',
-          'Fire loves Air. Earth loves Water.',
         ],
-        verdict: 'Fire loves Air. Earth loves Water.',
         comparisonTable: {
-          intro: 'Here is a quick look at each sign’s easiest and most challenging matches based on Sun signs alone.',
+          intro: 'The table lists each sign’s easiest and most challenging matches, based on Sun signs alone.',
           headers: ['Sign', 'Easiest Matches', 'Growth Matches', 'Keep in Mind'],
           rows: [
             { item: 'Aries', whatItDoes: 'Leo, Sagittarius, Gemini, Aquarius', whatItCannotDo: 'Cancer, Capricorn', bestFor: 'Needs a partner who can keep up.' },
@@ -421,21 +397,17 @@ export const moreBlogPosts: BlogPost[] = [
           'Opposite signs sit 180° apart on the wheel. Aries and Libra. Taurus and Scorpio. Leo and Aquarius. You get the idea.',
           'They share the same “axis,” so they care about the same topic from two sides. Aries says “me.” Libra says “we.” Together, they learn balance.',
           'As a result, these pairs often feel magnetic at first. They last when both people stop trying to change the other.',
-          'Mirror, not match.',
         ],
-        verdict: 'Mirror, not match.',
         toolSlug: 'love-compatibility-score',
       },
       {
         id: 'beyond-sun-signs',
         heading: 'Is Sun sign compatibility enough?',
         paragraphs: [
-          'Honestly, no. Your Sun sign is one planet out of ten. It’s a good first clue, but it can’t tell the whole story.',
-          'Your Moon sign shows how you need to be comforted. Your Venus sign shows how you show love. Your Mars sign shows how you handle desire and fights.',
-          'So a “bad” Sun match can still work beautifully if your Moons and Venuses agree. That’s why a full synastry chart beats any Sun-sign list.',
-          'Sun starts it. Moon keeps it.',
+          'Not on its own. Your Sun sign is one planet out of ten. It’s a good first clue, but it can’t tell the whole story.',
+          'Your [Moon sign](/blog/moon-sign-meaning-emotional-needs) shows how you need to be comforted. Your [Venus sign](/blog/venus-sign-love-language) shows how you show love. Your Mars sign shows how you handle desire and fights.',
+          'So a “bad” Sun match can still work well if your Moons and Venuses agree. That’s why a full [synastry chart](/blog/synastry-vs-composite-charts-explained) beats any Sun-sign list.',
         ],
-        verdict: 'Sun starts it. Moon keeps it.',
         bullets: [
           { title: 'Check Moon to Moon', body: 'Matching Moon elements make daily life feel easy and safe.' },
           { title: 'Check Venus to Mars', body: 'One person’s Venus touching the other’s Mars often means strong attraction.' },
@@ -447,7 +419,7 @@ export const moreBlogPosts: BlogPost[] = [
     faqs: [
       {
         question: 'What is the most compatible zodiac sign pair?',
-        answer: 'Pairs in the same or friendly elements usually match best. Popular easy pairs include Aries and Leo, Taurus and Virgo, Gemini and Libra, and Cancer and Pisces.',
+        answer: 'Pairs in the same or friendly elements usually match best. Popular easy pairs include Aries and Leo, Taurus and Virgo, Gemini and Libra, and Cancer and Pisces. Chinese astrology has its own best matches, listed in our [2026 Chinese zodiac guide](/blog/chinese-zodiac-2026-year-of-the-fire-horse).',
       },
       {
         question: 'Can incompatible zodiac signs have a good relationship?',
@@ -459,7 +431,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'How do I check real compatibility with my partner?',
-        answer: 'Enter both birth dates, times, and cities into a synastry or compatibility calculator. It compares every planet, not just your Sun signs.',
+        answer: 'Enter both birth dates, times, and cities into a synastry or compatibility calculator. It compares every planet, not just your Sun signs. If you follow Vedic astrology, read our guide to [kundli matching](/blog/kundli-matching-guna-milan-36-points).',
       },
     ],
   },
@@ -467,13 +439,12 @@ export const moreBlogPosts: BlogPost[] = [
     slug: 'venus-sign-love-language',
     serpTitle: 'Venus Sign Meaning: Your Astrology Love Language',
     title: 'Your Venus Sign Meaning: How You Love, Flirt, and Show You Care',
-    subtitle: 'Your Sun sign shows who you are. Your Venus sign shows how you love. Here is what each Venus sign wants from a partner.',
+    subtitle: 'Your Sun sign shows who you are. Your Venus sign shows how you love. See what each Venus sign wants from a partner.',
     description: 'What does your Venus sign mean? Find your love language for all 12 Venus signs, learn how to find yours, and see what you really need in a relationship.',
     category: 'Synastry & Relationships',
     categorySlug: 'relationships',
     publishedAt: '2026-10-12',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 8,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'venus-sign-finder',
     primaryToolSlug: 'venus-sign-finder',
     relatedToolSlugs: ['venus-sign-finder', 'love-style-profile', 'mars-sign-finder', 'zodiac-compatibility-calculator'],
@@ -490,20 +461,16 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'Venus is the planet of love, beauty, and pleasure. In your chart, it answers one big question: what makes you feel loved?',
           'It also shows your taste. Your style, your favorite music, and how you spend money on treats all trace back to Venus.',
-          'Here’s a fun fact. Venus never moves more than about 47° from the Sun. So your Venus sign is either your Sun sign or one or two signs next to it.',
-          'Venus is your love language.',
+          'One quirk makes it easy to guess. Venus never moves more than about 47° from the Sun. So your Venus sign is either your Sun sign or one or two signs next to it.',
         ],
-        verdict: 'Venus is your love language.',
         toolSlug: 'venus-sign-finder',
       },
       {
         id: 'venus-by-element',
         heading: 'How does each Venus sign show love?',
         paragraphs: [
-          'The fastest way to read Venus is by element. Then fine-tune with the sign itself.',
-          'Show love in their language, not yours.',
+          'The fastest way to read Venus is by element, the same idea behind [zodiac compatibility](/blog/zodiac-sign-compatibility-guide). Then fine-tune with the sign itself.',
         ],
-        verdict: 'Show love in their language, not yours.',
         comparisonTable: {
           intro: 'Find your Venus sign below. Then find your partner’s. The gap between the two rows is often where small fights start.',
           headers: ['Venus Sign', 'How They Show Love', 'What They Need', 'What Turns Them Off'],
@@ -530,17 +497,15 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'Venus shows what attracts you and how you receive love. Mars shows how you go after what you want.',
           'In other words, Venus is the magnet. Mars is the engine.',
-          'When one partner’s Venus sits in the same sign or element as the other’s Mars, the chemistry tends to be strong. That’s one of the classic signs of attraction in synastry.',
-          'Magnet meets engine.',
+          'When one partner’s Venus sits in the same sign or element as the other’s Mars, the chemistry tends to be strong. That’s one of the classic signs of attraction in [synastry](/blog/synastry-vs-composite-charts-explained).',
         ],
-        verdict: 'Magnet meets engine.',
         toolSlug: 'mars-sign-finder',
       },
     ],
     faqs: [
       {
         question: 'How do I find my Venus sign?',
-        answer: 'Enter your birth date into a Venus sign finder. Venus can change signs during a day, so adding your birth time and city makes it exact.',
+        answer: 'Enter your birth date into the [Venus sign finder](/tools/venus-sign-finder). Venus can change signs during a day, so adding your birth time and city makes it exact.',
       },
       {
         question: 'Why is my Venus sign different from my Sun sign?',
@@ -548,7 +513,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'What is Venus retrograde in a birth chart?',
-        answer: 'About 7% of people are born with Venus retrograde. They often take longer to trust in love and tend to revisit old relationships before moving on.',
+        answer: 'Retrograde means a planet looks like it’s moving backward, the same effect behind [Mercury retrograde](/blog/mercury-retrograde-meaning-survival-guide). About 7% of people are born with Venus retrograde. They often take longer to trust in love and tend to revisit old relationships before moving on.',
       },
       {
         question: 'Is Venus or Mars more important in love?',
@@ -560,13 +525,12 @@ export const moreBlogPosts: BlogPost[] = [
     slug: 'moon-sign-meaning-emotional-needs',
     serpTitle: 'Moon Sign Meaning: What Your Moon Says About You',
     title: 'Moon Sign Meaning: What Your Moon Sign Says About Your Feelings',
-    subtitle: 'Your Sun sign is your public self. Your Moon sign is the real you at 2 AM. Here is what your Moon wants, how it handles stress, and how to care for it.',
+    subtitle: 'Your Sun sign is your public self. Your Moon sign is the real you at 2 AM. Learn what your Moon wants, how it handles stress, and how to care for it.',
     description: 'What does your Moon sign mean? Learn how your Moon sign shapes your feelings, stress habits, and needs, with simple meanings for all 12 Moon signs.',
     category: 'Zodiac Signs',
     categorySlug: 'zodiac-signs',
     publishedAt: '2026-10-13',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 8,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'moon-sign-finder',
     primaryToolSlug: 'moon-sign-finder',
     relatedToolSlugs: ['moon-sign-finder', 'emotional-needs-profile', 'big-three-calculator', 'natal-lunar-phase-profile'],
@@ -584,19 +548,16 @@ export const moreBlogPosts: BlogPost[] = [
           'The Sun is how you shine. The Moon is how you feel.',
           'Your Moon sign shows what calms you down, what upsets you, and what “home” feels like. It also shows how you were nurtured as a child, and how you nurture others now.',
           'Because the Moon moves about 13° a day, it changes signs every two and a half days. That’s why your Moon can be totally different from your best friend’s, even with the same birthday month.',
-          'Sun shines. Moon feels.',
+          'Your Moon sign is different from the Moon’s phase, the shape you see in the sky. Our [Moon phases guide](/blog/moon-phases-new-moon-full-moon-guide) covers that side.',
         ],
-        verdict: 'Sun shines. Moon feels.',
         toolSlug: 'moon-sign-finder',
       },
       {
         id: 'moon-signs-list',
         heading: 'What does each Moon sign need?',
         paragraphs: [
-          'Here is a short, honest guide to all 12 Moon signs. Read yours first. Then read the Moon sign of someone you love.',
-          'Feed your Moon, calm your mind.',
+          'Read your own Moon sign first. Then read the Moon sign of someone you love. The gap between the two often explains your arguments.',
         ],
-        verdict: 'Feed your Moon, calm your mind.',
         comparisonTable: {
           intro: 'This table shows what each Moon sign needs to feel safe, and how it tends to react under stress.',
           headers: ['Moon Sign', 'Core Need', 'Under Stress', 'Quick Self-Care'],
@@ -623,17 +584,15 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'It’s very common. Your Moon shows your private self, the one your closest people see. Your Sun shows the self you grow into over time.',
           'Also, if you were born at night, the Moon was the brighter light in the sky. Many astrologers say the Moon speaks louder in night-time charts.',
-          'Finally, if your Moon sits near your Rising sign or an angle, it can drown out your Sun completely.',
-          'Private self speaks first.',
+          'Finally, if your Moon sits near your Rising sign or an angle, it can drown out your Sun completely. Our [Big Three guide](/blog/your-big-three-where-to-begin) shows how the three fit together.',
         ],
-        verdict: 'Private self speaks first.',
         toolSlug: 'big-three-calculator',
       },
     ],
     faqs: [
       {
         question: 'How do I find my Moon sign?',
-        answer: 'Enter your birth date, time, and city into a Moon sign finder. The Moon changes signs every 2 to 3 days, so the time helps on days when it switches.',
+        answer: 'Enter your birth date, time, and city into the [Moon sign finder](/tools/moon-sign-finder). The Moon changes signs every 2 to 3 days, so the time helps on days when it switches.',
       },
       {
         question: 'Can I find my Moon sign without my birth time?',
@@ -658,8 +617,7 @@ export const moreBlogPosts: BlogPost[] = [
     category: 'Moon Phases & Cycles',
     categorySlug: 'moon-cycles',
     publishedAt: '2026-10-14',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 8,
+    modifiedAt: '2026-10-22',
     featured: true,
     heroToolSlug: 'moon-phase-finder',
     primaryToolSlug: 'moon-phase-finder',
@@ -678,9 +636,7 @@ export const moreBlogPosts: BlogPost[] = [
           'The Moon doesn’t make its own light. It reflects the Sun, like a mirror.',
           'As the Moon circles Earth, we see different amounts of its sunlit side. When it sits between Earth and the Sun, we see almost nothing. That’s the New Moon. When Earth sits between them, we see the whole lit face. That’s the Full Moon.',
           'This trip takes about 29.5 days. Astronomers call it the synodic month.',
-          'Same Moon. Different light.',
         ],
-        verdict: 'Same Moon. Different light.',
         toolSlug: 'moon-phase-finder',
       },
       {
@@ -688,9 +644,7 @@ export const moreBlogPosts: BlogPost[] = [
         heading: 'What do the 8 Moon phases mean?',
         paragraphs: [
           'Think of the cycle like planting a garden. You plant, you water, you harvest, and then you clear the ground.',
-          'Plant. Grow. Harvest. Rest.',
         ],
-        verdict: 'Plant. Grow. Harvest. Rest.',
         comparisonTable: {
           intro: 'Use this simple guide to match your plans to the Moon’s rhythm.',
           headers: ['Phase', 'What You See', 'Best For', 'Skip This'],
@@ -713,10 +667,8 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'Keep it simple. You don’t need candles or crystals, though you can use them if you like.',
           'Within two days of the New Moon, write down three things you want to start. Use the present tense, like “I walk every morning.” Then pick one tiny action you can take this week.',
-          'Next, check which sign the New Moon is in. A New Moon in Taurus suits money goals. A New Moon in Gemini suits learning goals.',
-          'Small seed. Real growth.',
+          'Next, check which sign the New Moon is in. The [Moon phase finder](/tools/moon-phase-finder) shows it. A New Moon in Taurus suits money goals. A New Moon in Gemini suits learning goals.',
         ],
-        verdict: 'Small seed. Real growth.',
         toolSlug: 'new-moon-intention-planner',
       },
       {
@@ -725,10 +677,9 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'The Full Moon is a checkpoint. It sits about two weeks after the New Moon, so it shows how your goals are going.',
           'Look back at your New Moon list. What worked? What didn’t? Then write down one habit or worry you’re ready to drop.',
-          'Also, go easy on yourself. Full Moons can make emotions feel bigger, so sleep might be lighter and tempers shorter.',
-          'Review. Release. Reset.',
+          'Go easy on yourself. Full Moons can make emotions feel bigger, so sleep might be lighter and tempers shorter.',
+          'A few Full Moons each year are also lunar eclipses. Our [eclipse guide](/blog/eclipses-in-astrology-2026-guide) explains why those feel stronger.',
         ],
-        verdict: 'Review. Release. Reset.',
         toolSlug: 'full-moon-reflection-tool',
       },
     ],
@@ -743,7 +694,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'What Moon phase was I born under?',
-        answer: 'Enter your birth date into a Moon phase finder. Your birth phase shows your natural rhythm, like starting things (New Moon) or completing them (Full Moon).',
+        answer: 'Enter your birth date into the [natal lunar phase profile](/tools/natal-lunar-phase-profile). Your birth phase shows your natural rhythm, like starting things (New Moon) or completing them (Full Moon).',
       },
       {
         question: 'Does the Full Moon really affect sleep?',
@@ -760,8 +711,7 @@ export const moreBlogPosts: BlogPost[] = [
     category: 'Moon Phases & Cycles',
     categorySlug: 'moon-cycles',
     publishedAt: '2026-10-15',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 9,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'eclipse-calendar',
     primaryToolSlug: 'eclipse-calendar',
     relatedToolSlugs: ['eclipse-calendar', 'personal-eclipse-impact-tool', 'pre-natal-eclipse-finder', 'lunar-nodes-calculator-rahu-ketu'],
@@ -776,14 +726,12 @@ export const moreBlogPosts: BlogPost[] = [
         id: 'solar-vs-lunar',
         heading: 'What is the difference between a solar and lunar eclipse?',
         paragraphs: [
-          'A solar eclipse happens at a New Moon. The Moon passes in front of the Sun and blocks its light for a few minutes.',
+          'A solar eclipse happens at a [New Moon](/blog/moon-phases-new-moon-full-moon-guide). The Moon passes in front of the Sun and blocks its light for a few minutes.',
           'A lunar eclipse happens at a Full Moon. Earth’s shadow falls across the Moon, often turning it a deep red.',
           'In astrology, solar eclipses tend to open doors. Lunar eclipses tend to close them.',
-          'Solar starts. Lunar ends.',
         ],
-        verdict: 'Solar starts. Lunar ends.',
         comparisonTable: {
-          intro: 'Here is a side-by-side look at both eclipse types and what they usually bring.',
+          intro: 'Compare both eclipse types and what they usually bring.',
           headers: ['Eclipse Type', 'What Happens in the Sky', 'What It Often Brings', 'What It Is Not'],
           rows: [
             {
@@ -806,12 +754,10 @@ export const moreBlogPosts: BlogPost[] = [
         id: 'why-eclipse-seasons',
         heading: 'Why don’t eclipses happen every month?',
         paragraphs: [
-          'Great question. The Moon’s path is tilted about 5° compared to the Sun’s path. So most months, the Moon passes a little above or below the Sun.',
-          'The two paths only cross at two points, called the lunar nodes. When a New or Full Moon lands near a node, you get an eclipse.',
+          'The Moon’s path is tilted about 5° compared to the Sun’s path. So most months, the Moon passes a little above or below the Sun.',
+          'The two paths only cross at two points, called the [lunar nodes](/blog/north-node-life-purpose-meaning). When a New or Full Moon lands near a node, you get an eclipse.',
           'This lines up about every 6 months. That’s why eclipses come in pairs or trios, called eclipse seasons. Most years have 4 or 5 eclipses.',
-          'Nodes set the schedule.',
         ],
-        verdict: 'Nodes set the schedule.',
         toolSlug: 'lunar-nodes-calculator-rahu-ketu',
       },
       {
@@ -820,10 +766,8 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           '2026 had two eclipses that made headlines. First, a total lunar eclipse on March 3 turned the Moon red over much of Asia, Australia, and the Americas.',
           'Then, on August 12, a total solar eclipse crossed Greenland, Iceland, and northern Spain. It was the first total solar eclipse seen from mainland Europe in decades.',
-          'Each eclipse falls in a zodiac sign. To see how one affects you, find which house that sign rules in your chart.',
-          'Big sky. Personal house.',
+          'Each eclipse falls in a zodiac sign. To see how one affects you, find which house that sign rules in your chart. The [12 houses guide](/blog/12-houses-in-astrology-explained) tells you what that house covers.',
         ],
-        verdict: 'Big sky. Personal house.',
         toolSlug: 'personal-eclipse-impact-tool',
       },
       {
@@ -833,9 +777,7 @@ export const moreBlogPosts: BlogPost[] = [
           'Eclipses can speed things up. A job offer comes out of nowhere. A plan falls through. A secret comes out.',
           'So many astrologers suggest a few simple rules. Don’t force big decisions on the exact eclipse day. Instead, watch what shows up, then act once the dust settles, usually a week or two later.',
           'And if your birthday sits near an eclipse, pay extra attention. Eclipses near your Sun, Moon, or Rising tend to feel the most personal.',
-          'Watch first. Act later.',
         ],
-        verdict: 'Watch first. Act later.',
         toolSlug: 'pre-natal-eclipse-finder',
       },
     ],
@@ -850,7 +792,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'How do I know which eclipse affects me most?',
-        answer: 'Eclipses that land within a few degrees of your Sun, Moon, Rising sign, or Midheaven affect you most. An eclipse calculator can check this for you.',
+        answer: 'Eclipses that land within a few degrees of your Sun, Moon, Rising sign, or Midheaven affect you most. The [personal eclipse impact tool](/tools/personal-eclipse-impact-tool) checks this for you.',
       },
       {
         question: 'How many eclipses happen each year?',
@@ -862,13 +804,12 @@ export const moreBlogPosts: BlogPost[] = [
     slug: 'chinese-zodiac-2026-year-of-the-fire-horse',
     serpTitle: '2026 Chinese Zodiac: Year of the Fire Horse Guide',
     title: '2026 Chinese Zodiac: What the Year of the Fire Horse Means for You',
-    subtitle: 'The Fire Horse gallops in only once every 60 years. Here is what it means, which animals it helps, and how to find your own sign.',
+    subtitle: 'The Fire Horse gallops in only once every 60 years. Learn what it means, which animals it helps, and how to find your own sign.',
     description: '2026 is the Year of the Fire Horse. Learn what it means, how to find your Chinese zodiac animal and element, and what the year brings for each sign.',
     category: 'Zodiac Signs',
     categorySlug: 'zodiac-signs',
     publishedAt: '2026-10-16',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 8,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'chinese-zodiac-finder',
     primaryToolSlug: 'chinese-zodiac-finder',
     relatedToolSlugs: ['chinese-zodiac-finder', 'zodiac-sign-finder', 'annual-astrology-forecast', 'zodiac-compatibility-calculator'],
@@ -886,9 +827,7 @@ export const moreBlogPosts: BlogPost[] = [
           'The Horse is the 7th animal in the cycle. It stands for speed, freedom, courage, and a love of open roads.',
           'Each year also carries one of five elements: Wood, Fire, Earth, Metal, or Water. In 2026, Fire meets Horse. That doubles the heat.',
           'As a result, Fire Horse years tend to feel fast, bold, and restless. Big moves happen. Patience runs short.',
-          'Fast year. Bold moves.',
         ],
-        verdict: 'Fast year. Bold moves.',
         toolSlug: 'chinese-zodiac-finder',
       },
       {
@@ -897,12 +836,10 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'Start with your birth year. Then check one key detail: the Chinese New Year date for that year.',
           'Chinese New Year moves between January 21 and February 20. So if you were born in January or early February, you might belong to the year before.',
-          'For example, someone born on February 1, 2026 is still a Wood Snake, not a Fire Horse.',
-          'Check the New Year date.',
+          'For example, someone born on February 1, 2026 is still a Wood Snake, not a Fire Horse. The [Chinese zodiac finder](/tools/chinese-zodiac-finder) checks the New Year date for you.',
         ],
-        verdict: 'Check the New Year date.',
         comparisonTable: {
-          intro: 'Here are the 12 animals in order, with recent birth years. Remember the New Year rule for January and February birthdays.',
+          intro: 'The 12 animals in order, with recent birth years. Remember the New Year rule for January and February birthdays.',
           headers: ['Animal', 'Recent Years', 'Known For', 'Best Friends'],
           rows: [
             { item: 'Rat', whatItDoes: '1984, 1996, 2008, 2020', whatItCannotDo: 'Clever, quick, resourceful.', bestFor: 'Dragon, Monkey, Ox' },
@@ -928,9 +865,7 @@ export const moreBlogPosts: BlogPost[] = [
           'In Chinese astrology, signs in the Horse’s “friendly triangle” tend to ride this year’s energy best. Those are the Tiger, Dog, and Horse itself. The Goat is also a natural partner.',
           'By contrast, the Rat sits directly opposite the Horse. Rat years and Horse years can clash, so Rats may want to move slowly and avoid rash choices.',
           'Of course, your full Chinese chart has four pillars: year, month, day, and hour. The year animal is only the first one.',
-          'Ride with it, not against it.',
         ],
-        verdict: 'Ride with it, not against it.',
         toolSlug: 'annual-astrology-forecast',
       },
     ],
@@ -949,7 +884,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'Is Chinese astrology the same as Western astrology?',
-        answer: 'No. Western astrology uses 12 signs based on the Sun’s position each month. Chinese astrology uses 12 animals based on years, plus five elements.',
+        answer: 'No. Western astrology uses 12 signs based on the Sun’s position each month. Chinese astrology uses 12 animals based on years, plus five elements. For the Western side, start with our [Big Three guide](/blog/your-big-three-where-to-begin).',
       },
     ],
   },
@@ -957,13 +892,12 @@ export const moreBlogPosts: BlogPost[] = [
     slug: 'kundli-matching-guna-milan-36-points',
     serpTitle: 'Kundli Matching: Guna Milan 36 Points Explained',
     title: 'Kundli Matching Explained: What Your Guna Milan Score Out of 36 Really Means',
-    subtitle: 'Got a score of 22 out of 36 and don’t know if it’s good? Here is a simple breakdown of all 8 kootas, Nadi dosha, and what the numbers can and can’t tell you.',
+    subtitle: 'Got a score of 22 out of 36 and don’t know if it’s good? Get a simple breakdown of all 8 kootas, Nadi dosha, and what the numbers can and can’t tell you.',
     description: 'What is a good Kundli matching score? Learn how Guna Milan works, what the 8 kootas mean, why 18 out of 36 is the minimum, and match two charts free.',
     category: 'Vedic & Sidereal',
     categorySlug: 'vedic-jyotish',
     publishedAt: '2026-10-17',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 10,
+    modifiedAt: '2026-10-22',
     featured: true,
     heroToolSlug: 'kundli-matching-guna-milan',
     primaryToolSlug: 'kundli-matching-guna-milan',
@@ -982,11 +916,10 @@ export const moreBlogPosts: BlogPost[] = [
           'Guna Milan is also called Ashtakoota, which means “eight parts.” It looks at the Moon in both charts, along with its nakshatra, or birth star.',
           'Each of the 8 parts gets a score. Simple parts are worth 1 point. Big parts are worth up to 8. Together they add up to 36.',
           'The Moon is used because, in Vedic astrology, it shows the mind and emotions. So the match is mostly about how two minds live together.',
-          'Eight checks. Thirty-six points.',
+          'Guna Milan uses the Vedic (sidereal) zodiac, so your Moon sign may differ from the Western one. Our [Tropical vs. Sidereal guide](/blog/tropical-vs-sidereal-vedic-zodiac) explains why.',
         ],
-        verdict: 'Eight checks. Thirty-six points.',
         comparisonTable: {
-          intro: 'Here are all 8 kootas, from the smallest to the largest. The higher the points, the more weight it carries.',
+          intro: 'The 8 kootas run from smallest to largest. The more points a koota is worth, the more weight it carries.',
           headers: ['Koota', 'Max Points', 'What It Checks', 'In Plain English'],
           rows: [
             { item: 'Varna', whatItDoes: '1', whatItCannotDo: 'Spiritual and work temperament.', bestFor: 'Do your values line up?' },
@@ -1007,9 +940,7 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'Most astrologers use a simple scale. Below 18 is seen as a weak match. 18 to 24 is average and acceptable. 25 to 32 is very good. Above 32 is excellent, though rare.',
           'However, the total alone can mislead. A score of 26 with a Nadi dosha can be weaker than a score of 20 with no dosha.',
-          'Read the parts, not just the total.',
         ],
-        verdict: 'Read the parts, not just the total.',
         bullets: [
           { title: 'Below 18', body: 'Usually not recommended without a deeper chart review.' },
           { title: '18 to 24', body: 'Acceptable. Check Nadi, Bhakoot, and Manglik status.' },
@@ -1022,12 +953,10 @@ export const moreBlogPosts: BlogPost[] = [
         id: 'nadi-bhakoot-dosha',
         heading: 'What is Nadi dosha and is it serious?',
         paragraphs: [
-          'Every nakshatra belongs to one of three Nadis: Adi, Madhya, or Antya. If both partners share the same Nadi, the Nadi score drops to 0. That’s called Nadi dosha.',
+          'Every [nakshatra](/blog/nakshatra-meaning-your-birth-star) belongs to one of three Nadis: Adi, Madhya, or Antya. If both partners share the same Nadi, the Nadi score drops to 0. That’s called Nadi dosha.',
           'Traditionally, it’s linked to health and children. That’s why families take it seriously.',
           'Still, there are well-known exceptions. For example, many texts cancel Nadi dosha when both people share the same Moon sign but different nakshatras. A skilled astrologer checks these before saying no.',
-          'Serious, but often cancelled.',
         ],
-        verdict: 'Serious, but often cancelled.',
         toolSlug: 'nakshatra-finder',
       },
       {
@@ -1035,11 +964,9 @@ export const moreBlogPosts: BlogPost[] = [
         heading: 'Is Guna Milan enough to decide a marriage?',
         paragraphs: [
           'No, and most good astrologers agree. Guna Milan only looks at the Moon. It ignores the 7th house of marriage, Venus, and planetary periods (dashas).',
-          'So a full check also looks at Manglik dosha, the 7th house in both charts, and whether both people are running supportive dashas at the time of marriage.',
-          'And of course, real life matters most. Shared values, respect, and kindness can’t be scored by any chart.',
-          'A score guides. People decide.',
+          'So a full check also looks at Manglik dosha, the 7th house in both charts, and whether both people are running supportive [dashas](/tools/vimshottari-dasha-calculator) at the time of marriage.',
+          'Real life matters most. Shared values, respect, and kindness can’t be scored by any chart.',
         ],
-        verdict: 'A score guides. People decide.',
         toolSlug: 'manglik-dosha-calculator',
       },
     ],
@@ -1058,7 +985,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'What is Manglik dosha in Kundli matching?',
-        answer: 'Manglik dosha happens when Mars sits in the 1st, 2nd, 4th, 7th, 8th, or 12th house. It’s checked separately from the 36-point score.',
+        answer: 'Manglik dosha happens when Mars sits in the 1st, 2nd, 4th, 7th, 8th, or 12th house. It’s checked separately from the 36-point score. You can test it with the [Manglik dosha calculator](/tools/manglik-dosha-calculator).',
       },
     ],
   },
@@ -1071,8 +998,7 @@ export const moreBlogPosts: BlogPost[] = [
     category: 'Vedic & Sidereal',
     categorySlug: 'vedic-jyotish',
     publishedAt: '2026-10-18',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 9,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'nakshatra-finder',
     primaryToolSlug: 'nakshatra-finder',
     relatedToolSlugs: ['nakshatra-finder', 'vimshottari-dasha-calculator', 'vedic-rashi-finder', 'nakshatra-tara-bala-calculator'],
@@ -1090,9 +1016,8 @@ export const moreBlogPosts: BlogPost[] = [
           'The Moon takes about 27.3 days to circle the zodiac. So ancient Indian astronomers split its path into 27 “rest stops,” one for each night.',
           'Each stop is a nakshatra. Each one has a name, a symbol, a ruling planet, and a deity.',
           'Because nakshatras are smaller than signs, they give a much sharper reading. Two people with a Cancer Moon can have very different natures if one is in Pushya and the other in Ashlesha.',
-          'Twelve signs. Twenty-seven stars.',
+          'Nakshatras use the sidereal zodiac, which sits about 24° behind the Western one. Our [Tropical vs. Sidereal guide](/blog/tropical-vs-sidereal-vedic-zodiac) explains the gap.',
         ],
-        verdict: 'Twelve signs. Twenty-seven stars.',
         toolSlug: 'nakshatra-finder',
       },
       {
@@ -1101,9 +1026,7 @@ export const moreBlogPosts: BlogPost[] = [
         paragraphs: [
           'The nakshatras follow a repeating pattern of nine ruling planets. That pattern repeats three times to make 27.',
           'This matters because your nakshatra ruler becomes your first dasha lord, the planet that runs the opening chapter of your life.',
-          'Nine rulers. Three rounds.',
         ],
-        verdict: 'Nine rulers. Three rounds.',
         comparisonTable: {
           intro: 'Find your ruling planet below. Each row lists the three nakshatras that share the same ruler and its dasha length.',
           headers: ['Ruling Planet', 'Nakshatras', 'Dasha Length', 'Core Theme'],
@@ -1128,16 +1051,14 @@ export const moreBlogPosts: BlogPost[] = [
           'Each nakshatra is split into 4 quarters, called padas. Each pada covers 3°20′.',
           'Padas do two jobs. First, each one has a sound, or syllable, used to pick a baby’s name in many Hindu families. Second, padas build the Navamsa (D9) chart, which shows marriage and inner strength.',
           'So when someone says “Rohini pada 2,” they are pointing to one tiny slice of sky only 3°20′ wide.',
-          'Smaller slice. Sharper read.',
         ],
-        verdict: 'Smaller slice. Sharper read.',
         toolSlug: 'navamsa-d9-chart-calculator',
       },
     ],
     faqs: [
       {
         question: 'How do I find my nakshatra?',
-        answer: 'Enter your birth date, time, and city into a nakshatra finder. The Moon moves through a nakshatra in about one day, so the birth time matters.',
+        answer: 'Enter your birth date, time, and city into the [nakshatra finder](/tools/nakshatra-finder). The Moon moves through a nakshatra in about one day, so the birth time matters.',
       },
       {
         question: 'Is nakshatra the same as Rashi?',
@@ -1149,7 +1070,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'Why does my nakshatra matter for marriage?',
-        answer: 'Kundli matching uses both partners’ Moon nakshatras to score Tara, Yoni, Gana, and Nadi, which together make up 21 of the 36 points.',
+        answer: '[Kundli matching](/blog/kundli-matching-guna-milan-36-points) uses both partners’ Moon nakshatras to score Tara, Yoni, Gana, and Nadi, which together make up 21 of the 36 points.',
       },
     ],
   },
@@ -1162,8 +1083,7 @@ export const moreBlogPosts: BlogPost[] = [
     category: 'Chart Basics',
     categorySlug: 'chart-basics',
     publishedAt: '2026-10-19',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 8,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'lunar-nodes-calculator-rahu-ketu',
     primaryToolSlug: 'lunar-nodes-calculator-rahu-ketu',
     relatedToolSlugs: ['lunar-nodes-calculator-rahu-ketu', 'nodal-return-calculator', 'lunar-nodes-aspect-calculator', 'birth-chart-generator'],
@@ -1172,18 +1092,16 @@ export const moreBlogPosts: BlogPost[] = [
       'The North Node shows where you grow. The South Node shows your comfort zone.',
       'The nodes spend about 18 months in each sign and return to their start every 18.6 years.',
     ],
-    lead: 'Most of us ask the same big question at some point: “What am I here to do?” Astrology doesn’t hand you a job title. However, it does offer a compass. The North Node is a point in your birth chart, set by the Moon’s orbit, that shows the direction of growth you’re meant to move toward in this life.',
+    lead: 'Most of us ask the same big question at some point: “What am I here to do?” Astrology doesn’t hand you a job title. It does offer a compass, though. The North Node is a point in your birth chart, set by the Moon’s orbit, that shows the direction of growth you’re meant to move toward in this life.',
     sections: [
       {
         id: 'what-are-the-nodes',
         heading: 'What are the North and South Nodes?',
         paragraphs: [
-          'The nodes aren’t planets. They’re math points. They mark the two places where the Moon’s tilted orbit crosses the Sun’s path.',
+          'The nodes aren’t planets. They’re math points. They mark the two places where the Moon’s tilted orbit crosses the Sun’s path. Eclipses happen near them, as our [eclipse guide](/blog/eclipses-in-astrology-2026-guide) explains.',
           'The North Node and South Node always sit exactly opposite each other, 180° apart. If your North Node is in Leo, your South Node is in Aquarius.',
-          'In Vedic astrology, these same points are called Rahu (North) and Ketu (South).',
-          'Two points. One axis.',
+          'In Vedic astrology, these same points are called Rahu (North) and Ketu (South). Ketu also rules the first [nakshatra](/blog/nakshatra-meaning-your-birth-star), Ashwini.',
         ],
-        verdict: 'Two points. One axis.',
         toolSlug: 'lunar-nodes-calculator-rahu-ketu',
       },
       {
@@ -1193,9 +1111,7 @@ export const moreBlogPosts: BlogPost[] = [
           'Think of the South Node as your old, comfy sweater. You’re good at it. It feels safe. But you’ve outgrown it.',
           'The North Node is the new jacket you haven’t broken in yet. It feels awkward at first. Yet every time you wear it, life opens up.',
           'The goal isn’t to throw away the South Node. Instead, use its gifts to walk toward the North Node.',
-          'Comfort behind. Growth ahead.',
         ],
-        verdict: 'Comfort behind. Growth ahead.',
         comparisonTable: {
           intro: 'The nodes always come in opposite pairs. Find your axis below. The North Node is listed first.',
           headers: ['Nodal Axis', 'Grow Toward (North)', 'Lean Less On (South)', 'Life Lesson'],
@@ -1223,16 +1139,14 @@ export const moreBlogPosts: BlogPost[] = [
           'The nodes move backward through the zodiac. They take about 18.6 years to circle all the way around.',
           'So around ages 18 to 19, 37, 56, and 74, the nodes return to where they were at your birth. This is called a nodal return.',
           'Many people find these years mark turning points: leaving home, changing careers, or finding a new sense of purpose.',
-          'Every 18.6 years, a new chapter.',
         ],
-        verdict: 'Every 18.6 years, a new chapter.',
         toolSlug: 'nodal-return-calculator',
       },
     ],
     faqs: [
       {
         question: 'How do I find my North Node?',
-        answer: 'Enter your birth date into a lunar nodes calculator. The nodes stay in one sign for about 18 months, so the date alone usually works. Add your time to find its house.',
+        answer: 'Enter your birth date into the [lunar nodes calculator](/tools/lunar-nodes-calculator-rahu-ketu). The nodes stay in one sign for about 18 months, so the date alone usually works. Add your time to find its house.',
       },
       {
         question: 'Is the North Node my life purpose?',
@@ -1257,8 +1171,7 @@ export const moreBlogPosts: BlogPost[] = [
     category: 'Planetary Cycles & Timing',
     categorySlug: 'planetary-cycles',
     publishedAt: '2026-10-20',
-    modifiedAt: '2026-10-21',
-    readingMinutes: 8,
+    modifiedAt: '2026-10-22',
     heroToolSlug: 'solar-return-chart',
     primaryToolSlug: 'solar-return-chart',
     relatedToolSlugs: ['solar-return-chart', 'annual-profection-calculator', 'birthday-year-theme-tool', 'annual-astrology-forecast'],
@@ -1276,22 +1189,18 @@ export const moreBlogPosts: BlogPost[] = [
           'Earth takes about 365.25 days to circle the Sun. Because of that extra quarter day, the Sun doesn’t return to your exact birth degree at the same clock time each year.',
           'Instead, the moment can land on your birthday, the day before, or the day after. That exact moment is your solar return.',
           'Cast a chart for that minute, and you get your birthday chart for the year.',
-          'New year. New map.',
         ],
-        verdict: 'New year. New map.',
         toolSlug: 'solar-return-chart',
       },
       {
         id: 'three-things-to-read',
         heading: 'What should I look at first in my solar return chart?',
         paragraphs: [
-          'You don’t need to read everything. Start with these three. They cover 80% of the story.',
-          'Rising, Sun, Moon. Done.',
+          'You don’t need to read everything. Start with these three, and you’ll have the main themes of your year.',
         ],
-        verdict: 'Rising, Sun, Moon. Done.',
         bullets: [
           { title: '1. The Rising sign', body: 'This sets the tone of your year. Leo Rising often brings a more visible, creative year. Capricorn Rising often brings a year of hard work and results.' },
-          { title: '2. The Sun’s house', body: 'This shows where you’ll put most of your energy. Sun in the 10th house points to career. Sun in the 4th points to home and family.' },
+          { title: '2. The Sun’s house', body: 'This shows where you’ll put most of your energy. Sun in the 10th house points to career. Sun in the 4th points to home and family. The [12 houses guide](/blog/12-houses-in-astrology-explained) covers the rest.' },
           { title: '3. The Moon’s house', body: 'This shows where your feelings and needs will sit. Moon in the 7th house often puts relationships front and center.' },
         ],
         toolSlug: 'birthday-year-theme-tool',
@@ -1301,13 +1210,12 @@ export const moreBlogPosts: BlogPost[] = [
         heading: 'Does where you spend your birthday change your solar return?',
         paragraphs: [
           'Yes. The planets stay in the same signs wherever you are. However, the Rising sign and houses depend on your location.',
-          'Some people even travel for their birthday to get a better chart. It’s called a “birthday trip” or relocated solar return.',
+          'Some people even travel for their birthday to get a better chart. It’s called a “birthday trip” or relocated solar return. It works on the same idea as [astrocartography](/blog/astrocartography-planetary-lines-guide).',
           'Most astrologers use the place where you actually are at the moment of your return. If you’re home, use home.',
-          'Same Sun. Different angles.',
+          'For a fuller picture, pair it with your [annual profection](/blog/annual-profections-time-lord-guide). It names the planet that leads your year.',
         ],
-        verdict: 'Same Sun. Different angles.',
         comparisonTable: {
-          intro: 'Here’s how a solar return compares to two other popular yearly forecasting methods.',
+          intro: 'A solar return works well alongside two other yearly methods. Many astrologers read all three together.',
           headers: ['Method', 'How It Works', 'What It Shows Best', 'What It Cannot Show'],
           rows: [
             {
@@ -1340,7 +1248,7 @@ export const moreBlogPosts: BlogPost[] = [
       },
       {
         question: 'Do I need my birth time for a solar return chart?',
-        answer: 'Yes. Your exact birth time sets the Sun’s exact degree. Without it, the return time, Rising sign, and houses will be off.',
+        answer: 'Yes. Your exact birth time sets the Sun’s exact degree. Without it, the return time, Rising sign, and houses will be off. Our [birth time guide](/blog/why-your-exact-birth-time-matters) explains why minutes matter.',
       },
       {
         question: 'How long does a solar return chart last?',

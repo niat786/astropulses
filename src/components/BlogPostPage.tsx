@@ -1,6 +1,7 @@
 import { blogAuthor, blogPostImageSrc, formatBlogDate, getRelatedBlogPosts, type BlogPost } from '../data/blog'
 import { getTool, toolImageSrc } from '../data/tools'
 import type { LiveSkySnapshot } from '../lib/astro/skyVisuals'
+import { renderInline, stripInlineLinks } from '../lib/inlineLinks'
 import { Layout } from './Layout'
 import { RadixWheelSvg, SkyTelemetryStrip } from './ObservatoryVisuals'
 
@@ -72,7 +73,7 @@ export function BlogPostPage({ post, sky }: { post: BlogPost; sky: LiveSkySnapsh
               name: f.question,
               acceptedAnswer: {
                 '@type': 'Answer',
-                text: f.answer,
+                text: stripInlineLinks(f.answer),
               },
             })),
           },
@@ -274,7 +275,7 @@ export function BlogPostPage({ post, sky }: { post: BlogPost; sky: LiveSkySnapsh
               {/* Lead Paragraph */}
               <div class="site-card rounded-2xl p-6 sm:p-7 border-l-4 border-amber-300">
                 <p class="text-base sm:text-lg font-medium leading-relaxed text-ink">
-                  {post.lead}
+                  {renderInline(post.lead)}
                 </p>
               </div>
 
@@ -294,7 +295,7 @@ export function BlogPostPage({ post, sky }: { post: BlogPost; sky: LiveSkySnapsh
 
                     {section.paragraphs.map((p, pIdx) => (
                       <p key={pIdx} class="text-muted text-sm sm:text-base leading-7 sm:leading-8">
-                        {p}
+                        {renderInline(p)}
                       </p>
                     ))}
 
@@ -312,7 +313,7 @@ export function BlogPostPage({ post, sky }: { post: BlogPost; sky: LiveSkySnapsh
                           {section.callout.eyebrow}
                         </p>
                         <p class="mt-2 text-sm sm:text-base font-medium leading-relaxed text-ink">
-                          {section.callout.text}
+                          {renderInline(section.callout.text)}
                         </p>
                       </div>
                     )}
@@ -326,7 +327,7 @@ export function BlogPostPage({ post, sky }: { post: BlogPost; sky: LiveSkySnapsh
                             </span>
                             <div class="min-w-0">
                               <p class="text-sm font-bold text-ink">{b.title}</p>
-                              <p class="text-xs sm:text-sm text-muted mt-1 leading-relaxed">{b.body}</p>
+                              <p class="text-xs sm:text-sm text-muted mt-1 leading-relaxed">{renderInline(b.body)}</p>
                             </div>
                           </li>
                         ))}
@@ -400,7 +401,7 @@ export function BlogPostPage({ post, sky }: { post: BlogPost; sky: LiveSkySnapsh
                     {post.faqs.map((faq, idx) => (
                       <article key={idx} class="site-card rounded-2xl p-5 sm:p-6">
                         <h3 class="text-base sm:text-lg font-bold text-ink">{faq.question}</h3>
-                        <p class="text-muted mt-2 text-xs sm:text-sm leading-6 sm:leading-7">{faq.answer}</p>
+                        <p class="text-muted mt-2 text-xs sm:text-sm leading-6 sm:leading-7">{renderInline(faq.answer)}</p>
                       </article>
                     ))}
                   </div>

@@ -252,6 +252,18 @@ html[data-theme='light'] .site-card:hover {
 .theme-toggle .icon-moon {
   display: block;
 }
+.inline-link {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: #e5b84b;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.inline-link:hover {
+  color: #e5b84b;
+}
+
 .info-prose code {
   border-radius: 0.375rem;
   border: 1px solid var(--line);
