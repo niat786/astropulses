@@ -1,8 +1,6 @@
 import type { FC } from 'hono/jsx'
 import type { LiveSkySnapshot } from '../lib/astro/skyVisuals'
 import { tools, getCategory, toolImageSrc, type Tool } from '../data/tools'
-import { ZODIAC_GLYPHS } from '../lib/astro/skyVisuals'
-
 const PLANET_TOOL_LINKS: Record<string, string> = {
   Sun: '/tools/zodiac-sign-finder',
   Moon: '/tools/moon-sign-finder',
@@ -321,7 +319,7 @@ export const LiveEphemerisCard: FC<{ sky: LiveSkySnapshot }> = ({ sky }) => {
           </a>
         </div>
 
-        <div class="divide-y divide-white/5 text-xs">
+        <div class="divide-y divide-white/5 text-sm">
           {sky.planets.slice(0, 8).map((p) => {
             const toolHref = PLANET_TOOL_LINKS[p.name] || '/tools/planet-in-sign-calculator'
             return (
@@ -331,21 +329,21 @@ export const LiveEphemerisCard: FC<{ sky: LiveSkySnapshot }> = ({ sky }) => {
                 class="py-2 flex items-center justify-between gap-2 hover:bg-white/[0.02] px-1.5 -mx-1.5 rounded-lg transition"
               >
                 <div class="flex items-center gap-2">
-                  <span class="w-4 text-center font-bold text-amber-300">
+                  <span class="w-5 text-center font-bold text-amber-300">
                     {p.glyph}
                   </span>
                   <span class="font-medium text-slate-200">{p.name}</span>
                   {p.retrograde && (
-                    <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-400/10 text-amber-300 font-mono">
+                    <span class="text-xs px-1.5 py-0.5 rounded bg-amber-400/10 text-amber-300 font-mono">
                       ℞
                     </span>
                   )}
                 </div>
-                <div class="text-right font-mono">
+                <div class="text-right">
                   <span class="text-slate-200">
-                    {ZODIAC_GLYPHS[p.sign]} {p.degreeFormatted}
+                    {p.sign} <span class="font-mono">{p.degreeFormatted}</span>
                   </span>
-                  <span class="text-slate-500 block text-[10px]">
+                  <span class="text-slate-500 block text-xs">
                     House {p.house} · {p.dignity}
                   </span>
                 </div>
